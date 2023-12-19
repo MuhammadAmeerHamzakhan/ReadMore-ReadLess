@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More / Read Less </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Read More & Read Less Button</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Feugiat nibh sed pulvinar proin gravida. Arcu bibendum at varius vel pharetra
+                vel turpis nunc eget. Amet facilisis magna etiam tempor orci.
+                Praesent tristique magna sit amet purus gravida quis blandit.
+                Justo nec ultrices dui sapien eget. Sed felis eget velit aliquet sagittis.
+                Malesuada pellentesque elit eget gravida cum. Viverra maecenas accumsan lacus vel facilisis volutpat.
+                Placerat vestibulum lectus mauris ultrices eros in cursus turpis.
+                Lorem mollis. Sed ullamcorper morbi tincidunt ornare massa. Varius vel pharetra vel turpis nunc
+                <span id="dots">...</span><span id="invicible-text">Eget mi proin sed libero enim. Mauris
+                    sit amet massa vitae tortor condimentum lacinia quis.
+                    Eget magna fermentum iaculis eu. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor.
+                    Quisque sagittis purus sit amet volutpat consequat.
+                    Facilisis sed odio morbi quis commodo odio.
+                    Accumsan lacus vel facilisis volutpat. Blandit massa enim nec dui. Nulla facilisi morbi tempus
+                    iaculis urna.
+                    At imperdiet dui accumsan sit amet nulla facilisi.</span>
+            </p>
+            <button id="btn" onclick="MoreLess()">Read More</button>
+        </div>
+    </div>
+    <script>
+        function MoreLess() {
+            var dots = document.getElementById("dots");
+            var invicibleText = document.getElementById("invicible-text");
+            var btnText = document.getElementById("btn");
+            if (dots.style.display != "none"){
+            dots.style.display = "none"
+            invicibleText.style.display = "inline"
+            btnText.innerHTML = "Read Less"}
+            else {
+                dots.style.display="inline"
+                invicibleText.style.display="none"
+                btnText.innnerHTML="Read More"
+            }
+            
+        }
+    </script>
+</body>
+</html>
